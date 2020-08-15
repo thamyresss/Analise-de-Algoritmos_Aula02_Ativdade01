@@ -1,4 +1,4 @@
-# Analise de Algoritmos - Aula 02 - 
+# Analise de Algoritmos - Aula 02  
 ## Atividade 01:
 Considere que um arquivo de entrada (em formato texto) tenha o seguinte formato:<br>
 - a primeira linha contém o número ; <br>
