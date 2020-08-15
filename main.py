@@ -1,4 +1,5 @@
 import csv
+import time
 
 n=0
 t=0
@@ -11,23 +12,23 @@ with open("dataset-1-a.csv", "r") as arquivo_csv:
   for i in arquivo:
     itensDoAquivo.append(i)
 
-n = itensDoAquivo[0][0]
-t = itensDoAquivo[1][0]
+n = itensDoAquivo[0]
+t = int(itensDoAquivo[1][0])
 D = itensDoAquivo[2:]
 
 
-novorquivo = open('saida.txt','a')
-for i in D:
-  if n in i:
-    novorquivo.write("True")
+novoarquivo = open('saida-a.txt','a')
+start = time.time()
+for i in range (t):
+  
+  if D[i] == n:    
+    novoarquivo.write("True" + '\n')
+    novoarquivo.write(str(i) + '\n')
     
   else:
-    novorquivo.write("False")
- 
-novorquivo.close()
+    novoarquivo.write("False" + '\n')
+    novoarquivo.write("-1" + '\n')
     
+novoarquivo.write(str(time.time() * 1000 - start))
+novoarquivo.close()
 
-
-print('n',n)
-print('d',D)
-#print(itensDoAquivo)
